@@ -1,0 +1,190 @@
+#content-dashboard {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.content-wrapper-dashboard {
+  width: 90vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+div.content-wrapper-dashboard p:first-of-type {
+  margin-top: 40px;
+}
+
+div.content-wrapper-dashboard p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+div.content-wrapper-dashboard p span {
+  font-weight: 500;
+  color: #596aff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+div.content-wrapper-dashboard p a {
+  font-weight: 500;
+  color: #596aff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.1s;
+}
+
+div.content-wrapper-dashboard p a:active {
+  font-size: 20px;
+  color: #4a56c2;
+}
+
+div.content-wrapper-dashboard .buttons {
+  width: 100%;
+  margin: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+div.content-wrapper-dashboard .buttons button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+
+  background-color: #596aff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+
+  transition: all 0.3s;
+}
+
+div.content-wrapper-dashboard .buttons button:active {
+  background-color: #3746d0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+div.modal {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background-color: rgba(0,0,0,0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.content-modal {
+  width: 90vw;
+  
+  background-color: #fff;
+
+  border-radius: 20px;
+}
+
+form.update-user {
+  background: #c2cff2;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+  border-radius: 20px;
+
+  padding: 15px;
+}
+
+form.update-user fieldset {
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #383838;
+}
+
+form.update-user fieldset legend {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 24px;
+}
+
+form.update-user div.input-block {
+  display: flex;
+  flex-direction: column;
+}
+
+form.update-user div.input-block + div.input-block {
+  margin-top: 10px;
+}
+
+form.update-user div.input-block label {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+form.update-user div.input-block input {
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px;
+  color: #596aff;
+}
+
+form.update-user fieldset a {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form.update-user fieldset button:first-of-type {
+  margin-top: 10px;
+}
+
+form.update-user fieldset button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+
+  background-color: #596aff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+
+  transition: all 0.3s;
+}
+
+form.update-user fieldset button:active {
+  background-color: #3746d0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 1100px) {
+  div.content-wrapper-dashboard {
+    width: 50vw;
+  }
+  div.content-wrapper-dashboard .buttons button:hover {
+    background-color: #3746d0;
+  }
+}

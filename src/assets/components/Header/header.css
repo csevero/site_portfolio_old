@@ -1,0 +1,141 @@
+div.header-desktop {
+  display: none;
+}
+
+div.header-mobile {
+  display: initial;
+  position: fixed;
+}
+
+div.header-mobile button {
+  width: 30px;
+  height: 30px;
+
+  position: fixed;
+
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #c2cff2;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.3s;
+}
+
+div.header-mobile button:active {
+  box-shadow: 3px 3px 0 #000;
+}
+
+div.header-mobile img {
+  width: 20px;
+  height: 20px;
+}
+
+div.header-mobile .content-menu {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #c2cff2;
+
+  animation-name: apresentacao-entrada;
+  animation-duration: 0.3s;
+}
+
+div.header-mobile .content-exit {
+  animation-name: apresentacao-saida;
+  animation-duration: 0.3s;
+}
+
+div.header-mobile .content-menu a {
+  height: 30px;
+  font-weight: 700;
+  color: #596aff;
+
+  transition: all 0.1s;
+}
+
+div.header-mobile .content-menu a:active {
+  font-size: 22px;
+  color: #4a56c2;
+}
+
+div.header-mobile .ref-dashboard {
+  text-transform: uppercase;
+}
+
+@media (min-width: 1100px) {
+  div.header-mobile {
+    display: none;
+  }
+
+  div.header-desktop {
+    display: initial;
+    margin-top: 10px;
+    height: 30px;
+  }
+
+  div.header-desktop a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #596aff;
+    margin: 0 10px;
+
+    transition: all 0.3s;
+  }
+
+  div.header-desktop a:hover {
+    font-size: 22px;
+    color: #4a56c2;
+  }
+
+  div.header-desktop .ref-login {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+
+  div.header-desktop .ref-dashboard {
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+    text-transform: uppercase;
+  }
+}
+
+@keyframes apresentacao-entrada {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+
+  100% {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+
+@keyframes apresentacao-saida {
+  0% {
+    width: 100vw;
+    height: 100vh;
+    background: #c2cff2;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+
+    display: none;
+  }
+}
