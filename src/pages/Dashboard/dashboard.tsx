@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import Header from "../../assets/components/Header/header";
 import { Link, useHistory } from "react-router-dom";
 import api from "../../services/api";
@@ -38,7 +38,8 @@ export default function Dashboard() {
     }
   }, [token, _id]);
 
-  async function handleUpdate() {
+  async function handleUpdate(e: FormEvent) {
+    e.preventDefault();
     const values = { name, email, pass };
     await api
       .put(`/user-update/${_id}`, values, {
@@ -50,6 +51,11 @@ export default function Dashboard() {
       .catch((err) => {
         alert(err.data);
       });
+
+    setName("");
+    setEmail("");
+    setPass("");
+    setModal(false);
   }
 
   async function deleteUser() {

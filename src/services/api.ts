@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-   baseURL: 'http://carlossevero.ddns.net:3333'
+   baseURL: 'https://backend-site-biografia.herokuapp.com'
 })
 
 export default api;

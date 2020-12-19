@@ -26,7 +26,7 @@ function Header() {
     } else {
       getData();
     }
-  }, []);
+  }, [token]);
 
   return (
     <>
