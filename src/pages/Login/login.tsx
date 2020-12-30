@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import Button from "../../assets/components/Button/button";
 import Header from "../../assets/components/Header/header";
 import api from "../../services/api";
 
@@ -10,7 +11,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  async function handleLogin(e: FormEvent) {
+  async function userLogin(e: FormEvent) {
     e.preventDefault();
 
     const values = { email, password };
@@ -25,16 +26,15 @@ export default function Login() {
 
         history.push("/dashboard");
       })
-      .catch((err) => {
+      .catch(() => {
         alert("Email ou senha incorreta");
-        console.log(err);
       });
   }
   return (
-    <div id='content-login'>
+    <div id='content-main'>
       <Header />
       <div className='content-wrapper-login'>
-        <form onSubmit={handleLogin} className='login-user'>
+        <form onSubmit={userLogin} className='login-user'>
           <fieldset>
             <legend>Login</legend>
             <div className='input-block'>
@@ -59,7 +59,7 @@ export default function Login() {
             </div>
 
             <Link
-              to='/login'
+              to='#'
               onClick={() =>
                 alert("opa, estamos trabalhando nisso ainda, aguarde =D")
               }
@@ -71,7 +71,7 @@ export default function Login() {
             >
               Quero me cadastrar
             </Link>
-            <button type='submit'>LOGIN</button>
+            <Button type='submit'>LOGIN</Button>
           </fieldset>
         </form>
       </div>

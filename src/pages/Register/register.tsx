@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
+import Button from "../../assets/components/Button/button";
 import Header from "../../assets/components/Header/header";
 
 import api from "../../services/api";
@@ -28,13 +29,12 @@ export default function Register() {
 
         history.push("/login");
       })
-      .catch((err) => {
-        const { error } = err.response.data;
-        alert(error);
+      .catch(() => {
+        alert("Erro para fazer o cadastro");
       });
   }
   return (
-    <div id='content-register'>
+    <div id='content-main'>
       <Header />
       <div className='content-wrapper-register'>
         <form onSubmit={handleSubmit} className='register-user'>
@@ -75,7 +75,7 @@ export default function Register() {
             <Link to='/login'>
               Já possui cadastro? Clique aqui para fazer login
             </Link>
-            <button type='submit'>CADASTRAR</button>
+            <Button type='submit'>CADASTRAR</Button>
           </fieldset>
         </form>
       </div>

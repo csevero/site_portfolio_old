@@ -5,6 +5,8 @@ div.header-desktop {
 div.header-mobile {
   display: initial;
   position: fixed;
+
+  z-index: 10;
 }
 
 div.header-mobile button {
@@ -48,6 +50,7 @@ div.header-mobile .content-menu {
 
   animation-name: apresentacao-entrada;
   animation-duration: 0.3s;
+
 }
 
 div.header-mobile .content-exit {

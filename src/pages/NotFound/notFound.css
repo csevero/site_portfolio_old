@@ -1,0 +1,41 @@
+div.content-wrapper-not-found {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+div.content-wrapper-not-found h1 {
+  animation: color-text1 ease-out infinite 1s;
+}
+
+div.content-wrapper-not-found h2 {
+  font-weight: 500;
+}
+
+div.content-wrapper-not-found .button {
+  width: 250px;
+}
+
+@media(min-width: 1100px) {
+  div.content-wrapper-not-found {
+    width: 50vw;
+  }
+}
+
+@keyframes color-text1 {
+  0% {
+    color: rgb(99, 91, 255);
+  }
+
+  50% {
+    color: rgb(170, 166, 255);
+  }
+
+  100% {
+    color: rgb(99, 91, 255);
+  }
+}

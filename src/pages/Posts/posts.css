@@ -1,39 +1,7 @@
-#content-posts {
-   width: 100%;
-
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
 .content-wrapper-posts {
    width: 90vw;
-   height: 100vh;
 
    display: flex;
    justify-content: center;
    align-items: center;
-
-   z-index: -100;
-}
-
-.text-main-posts {
-   animation: infinite text-posts 1.0s ease-in-out;
-}
-
-@keyframes text-posts {
-   0%{
-      font-size: 20px;
-      transform: rotate(0);
-   }
-
-   50% {
-      font-size: 30px;
-      color: #596aff;
-   }
-
-   100% {
-      font-size: 20px;
-      transform: rotate(360deg);
-   }
 }

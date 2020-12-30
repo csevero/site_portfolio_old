@@ -1,12 +1,13 @@
 import React from "react";
 import Footer from "../../assets/components/Footer/footer";
 import Header from "../../assets/components/Header/header";
+import LinkAnchor from "../../assets/components/LinkAnchor/linkAnchor";
 
 import "./history.css";
 
 export default function Historia() {
   return (
-    <div id='content-history'>
+    <div id='content-main'>
       <Header />
       <div className='content-wrapper-history'>
         <h1 className='text-main'>Minha história</h1>
@@ -42,98 +43,48 @@ export default function Historia() {
           </div>
           <div className='text-4'>
             Quem me apresentou essa tecnologia foi o{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/alemon_ice/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/alemon_ice/'>
               Rafael Dias
-            </a>{" "}
+            </LinkAnchor>{" "}
             um amigo de longa data que está me ajudando a sempre aprender mais
             sobre a tecnologia. Agradeço a mim por estar sempre me motivando a
             continua firme nos objetivos e não deixar me desanimar com os
             problemas, também a minha família e amigos, especialmente ao{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/matheus_9110/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/matheus_9110/'>
               Matheus
-            </a>
+            </LinkAnchor>
             ,{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/alemon_ice/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/alemon_ice/'>
               Rafael
-            </a>
+            </LinkAnchor>
             ,{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/douglasxmo/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/douglasxmo/'>
               Douglas
-            </a>
+            </LinkAnchor>
             ,{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/eriksevero/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/eriksevero/'>
               Erik
-            </a>
+            </LinkAnchor>
             ,{" "}
-            <a
-              className='link-social-network'
-              href='https://www.facebook.com/brayan.martins.7946281'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.facebook.com/brayan.martins.7946281'>
               Brayan
-            </a>
+            </LinkAnchor>
             ,{" "}
-            <a
-              className='link-social-network'
-              href='https://www.facebook.com/felipe.barrosvarjao'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.facebook.com/felipe.barrosvarjao'>
               Felipe
-            </a>
+            </LinkAnchor>
             ,{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/axell.rocha/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/axell.rocha/'>
               Axel
-            </a>
+            </LinkAnchor>
             ,{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/ci.c.ro/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/ci.c.ro/'>
               Cicero
-            </a>{" "}
+            </LinkAnchor>{" "}
             e minha namorada{" "}
-            <a
-              className='link-social-network'
-              href='https://www.instagram.com/julliana.olvr/'
-              target='_blank'
-              rel='noreferrer noopener'
-            >
+            <LinkAnchor link='https://www.instagram.com/julliana.olvr/'>
               Juliana
-            </a>
+            </LinkAnchor>
             .
           </div>
         </div>

@@ -12,46 +12,29 @@ import linkIcon from "../../assets/images/vector/linke.svg";
 import "./home.css";
 import Header from "../../assets/components/Header/header";
 import Footer from "../../assets/components/Footer/footer";
+import LinkAnchor from "../../assets/components/LinkAnchor/linkAnchor";
 
 export default function Home() {
   return (
-    <div id='content-home'>
+    <div id='content-main'>
       <Header />
-      <div className='content-main'>
+      <div className='content-wrapper-main'>
         <img src={rostoImg} alt='fotoRosto' className='img-rosto' />
         <h1>Carlos Severo</h1>
         <div className='social-networks'>
-          <a
-            href='https://www.instagram.com/carlosedu156/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <LinkAnchor link='https://www.instagram.com/carlosedu156/'>
             <img src={instaIcon} alt='icone instagram' />
-          </a>
-          <a
-            href='https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          </LinkAnchor>
+          <LinkAnchor link='https://api.whatsapp.com/send?phone=5515996605712&text=Ol%C3%A1%20Carlos%2C%20vim%20pelo%20seu%20site!'>
             <img src={whatsIcon} alt='icone whatsapp' />
-          </a>
-          <a
-            href='https://www.linkedin.com/in/carlos-severo-634271162/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          </LinkAnchor>
+          <LinkAnchor link='https://www.linkedin.com/in/carlos-severo-634271162/'>
             <img src={linkIcon} alt='icone linkedin' />
-          </a>
-          <a
-            href='https://github.com/kissinger156'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          </LinkAnchor>
+          <LinkAnchor link='https://github.com/kissinger156'>
             <img src={gitIcon} alt='icone github' />
-          </a>
+          </LinkAnchor>
         </div>
-      </div>
-      <div className='content-sec'>
         <div className='box-text'>
           <div className='text-1'>
             <h1>Quem eu sou</h1>
@@ -60,7 +43,7 @@ export default function Home() {
               programação e sempre estou buscando conhecer e aprender novos
               conceitos, com isso em mente, fazer uma biografia em forma de site
               seria uma boa forma de treinar! Espero que gostem, se quiser me
-              conhecer melhor, acesse minha <Link to='/historia'>HISTÓRIA</Link>
+              conhecer melhor, acesse minha <Link to='/historia'>história</Link>
             </p>
           </div>
           <div className='text-2'>

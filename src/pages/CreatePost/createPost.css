@@ -1,0 +1,174 @@
+.back-image {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+
+.back-image:active {
+  opacity: 0.6;
+}
+
+.back-image:hover {
+  opacity: 0.6;
+}
+
+.content-wrapper-create-post {
+  width: 90vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 45px;
+}
+
+form.create-post {
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+
+  background: #c2cff2;
+
+  text-align: justify;
+
+  margin: 10px 0;
+}
+
+form.create-post fieldset {
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #383838;
+}
+
+form.create-post fieldset legend {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 24px;
+}
+
+form.create-post div.input-block {
+  display: flex;
+  flex-direction: column;
+}
+
+form.create-post div.input-block + div.input-block {
+  margin-top: 10px;
+}
+
+form.create-post div.input-block label {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+form.create-post div.input-block textarea {
+  min-height: 150px;
+  resize: vertical;
+  font-family: Poppins;
+}
+
+form.create-post div.input-block .select {
+  display: flex;
+  flex-direction: row;
+}
+
+form.create-post div.input-block .select select {
+  width: 90%;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+  color: #596aff;
+  background-color: #fff;
+  border: none;
+}
+
+form.create-post div.input-block .select img {
+  width: 10%;
+  height: 35px;
+
+  margin-left: 15px;
+
+  cursor: pointer;
+}
+
+form.create-post div.input-block input,
+textarea {
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px;
+  color: #596aff;
+}
+
+form.create-category {
+  width: 90vw;
+  background: #c2cff2;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+  border-radius: 20px;
+
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+form.create-category div.input-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+form.create-category div.input-block input {
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px;
+  color: #596aff;
+
+  text-transform: capitalize;
+}
+
+form.create-category legend {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 24px;
+}
+
+form.create-category legend span {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+@media (min-width: 1100px) {
+  .content-wrapper-create-post {
+    margin: 0;
+  }
+
+  form.create-post {
+    width: 50vw;
+  }
+
+  form.create-category {
+    width: 50vw;
+  }
+}

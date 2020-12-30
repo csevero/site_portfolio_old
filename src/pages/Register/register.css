@@ -1,14 +1,5 @@
-#content-register {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 div.content-wrapper-register {
   width: 90vw;
-  height: 100%;
 
   margin-top: 50px;
 
@@ -76,35 +67,8 @@ form.register-user fieldset a {
   font-weight: 500;
 }
 
-form.register-user fieldset button {
-  width: 100%;
-  height: 40px;
-  cursor: pointer;
-
-  background-color: #596aff;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin-top: 5px;
-
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-
-  transition: all 0.3s;
-}
-
-form.register-user fieldset button:active {
-  background-color: #3746d0;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-}
-
 @media (min-width: 1100px) {
   form.register-user {
-    width: 700px;
-  }
-
-  form.register-user fieldset button:hover {
-   background-color: #3746d0;
+    width: 50vw;
   }
 }

@@ -4,6 +4,8 @@ import { Link, useHistory } from "react-router-dom";
 import api from "../../services/api";
 
 import "./dashboard.css";
+import Button from "../../assets/components/Button/button";
+import Modal from "../../assets/components/Modal/modal";
 
 interface IUser {
   _id: string;
@@ -24,9 +26,14 @@ export default function Dashboard() {
   const [pass, setPass] = useState("");
 
   async function getData() {
-    const response = await api.get(`/user-by-id/${_id}`);
-
-    await setData([response.data]);
+    await api
+      .get(`/user-by-id/${_id}`)
+      .then((response) => {
+        setData([response.data]);
+      })
+      .catch(() => {
+        alert("Erro para capturar os dados");
+      });
   }
 
   useEffect(() => {
@@ -38,7 +45,15 @@ export default function Dashboard() {
     }
   }, [token, _id]);
 
-  async function handleUpdate(e: FormEvent) {
+  if (!data) {
+    return (
+      <div>
+        <h1>CARREGANDO...</h1>
+      </div>
+    );
+  }
+
+  async function userUpdate(e: FormEvent) {
     e.preventDefault();
     const values = { name, email, pass };
     await api
@@ -48,8 +63,8 @@ export default function Dashboard() {
       .then(() => {
         alert("Dados atualizado com sucesso");
       })
-      .catch((err) => {
-        alert(err.data);
+      .catch(() => {
+        alert("Erro durante atualização");
       });
 
     setName("");
@@ -67,22 +82,24 @@ export default function Dashboard() {
         .then(() => {
           alert("Cadastro excluído com sucesso!");
         })
-        .catch((err) => {
-          alert(err.data);
+        .catch(() => {
+          alert("Erro durante exclusão do cadastro");
         });
 
       history.push("/");
     }
   }
 
-  function logout() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("_id");
-    history.push("/");
+  function logoutUser() {
+    if (window.confirm("Deseja fazer o logout?")) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("_id");
+      history.push("/");
+    }
   }
 
   return (
-    <div id='content-dashboard'>
+    <div id='content-main'>
       <Header />
       <div className='content-wrapper-dashboard'>
         {data.map((data) => {
@@ -111,58 +128,69 @@ export default function Dashboard() {
               </p>
               <p>Caso queira, você pode: </p>
               <div className='buttons'>
-                <button onClick={() => setModal(!modal)}>
-                  Editar seu cadastro
-                </button>
-                <button onClick={deleteUser}>Excluir seu cadastro</button>
-                <button onClick={logout}>Fazer Logout</button>
+                <Button onClick={() => setModal(!modal)}>
+                  Atualizar seu cadastro{" "}
+                </Button>
+
+                <Link to='/criar-post'>
+                  <Button>Fazer uma postagem</Button>
+                </Link>
+
+                <Button onClick={logoutUser}>Deslogar</Button>
+
+                <Button onClick={deleteUser} backgroundColor='#d90000'>
+                  Deletar Cadastro{" "}
+                </Button>
               </div>
               {modal ? (
-                <div className='modal'>
-                  <div className='content-modal'>
-                    <form onSubmit={handleUpdate} className='update-user'>
-                      <fieldset>
-                        <legend>Atualize seus dados</legend>
-                        <div className='input-block'>
-                          <label htmlFor='name'>Nome</label>
-                          <input
-                            type='text'
-                            id='name'
-                            required
-                            pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                          />
-                        </div>
-                        <div className='input-block'>
-                          <label htmlFor='email'>Email</label>
-                          <input
-                            type='email'
-                            id='email'
-                            required
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                          />
-                        </div>
-                        <div className='input-block'>
-                          <label htmlFor='pass'>Senha</label>
-                          <input
-                            type='password'
-                            id='pass'
-                            required
-                            value={pass}
-                            onChange={(e) => setPass(e.target.value)}
-                          />
-                        </div>
-                        <button type='submit'>ATUALIZAR</button>
-                        <button onClick={() => setModal(!modal)} type='button'>
-                          CANCELAR
-                        </button>
-                      </fieldset>
-                    </form>
-                  </div>
-                </div>
-              ) : null}
+                <Modal>
+                  <form onSubmit={userUpdate} className='update-user'>
+                    <fieldset>
+                      <legend>Atualize seus dados</legend>
+                      <div className='input-block'>
+                        <label htmlFor='name'>Nome</label>
+                        <input
+                          type='text'
+                          id='name'
+                          required
+                          pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                        />
+                      </div>
+                      <div className='input-block'>
+                        <label htmlFor='email'>Email</label>
+                        <input
+                          type='email'
+                          id='email'
+                          required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
+                      </div>
+                      <div className='input-block'>
+                        <label htmlFor='pass'>Senha</label>
+                        <input
+                          type='password'
+                          id='pass'
+                          required
+                          value={pass}
+                          onChange={(e) => setPass(e.target.value)}
+                        />
+                      </div>
+                      <Button type='submit'>Atualizar</Button>
+                      <Button
+                        onClick={() => setModal(!modal)}
+                        backgroundColor='#d90000'
+                      >
+                        Cancelar
+                      </Button>
+                    </fieldset>
+                  </form>
+                </Modal>
+              ) : (
+                <div className='saida-modal'> </div>
+              )}
             </div>
           );
         })}
