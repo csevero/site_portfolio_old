@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import createPost from "./pages/CreatePost/createPost";
-import Dashboard from "./pages/Dashboard/dashboard";
-import Historia from "./pages/History/history";
-import Home from "./pages/Home/home";
-import Login from "./pages/Login/login";
-import NotFound from "./pages/NotFound/notFound";
-import Posts from "./pages/Posts/posts";
-import Register from "./pages/Register/register";
+import createPost from "./pages/CreatePost";
+import Dashboard from "./pages/Dashboard";
+import Historia from "./pages/History";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
+import Post from "./pages/Post";
+import Posts from "./pages/Posts";
+import Register from "./pages/Register";
 
 export default function Routes() {
   return (
@@ -16,6 +17,7 @@ export default function Routes() {
         <Route path='/' exact component={Home} />
         <Route path='/historia' component={Historia} />
         <Route path='/postagens' component={Posts} />
+        <Route path="/postagem/:categoryName/:id" component={Post} />
         <Route path='/cadastro' component={Register} />
         <Route path='/login' component={Login} />
         <Route path='/dashboard' component={Dashboard} />

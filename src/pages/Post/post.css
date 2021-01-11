@@ -1,0 +1,7 @@
+.content-wrapper-post {
+   width: 90vw;
+   display: flex;
+   justify-content: center;
+
+   margin-top: 50px;
+}

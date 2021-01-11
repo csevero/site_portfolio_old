@@ -14,18 +14,12 @@ div.content-wrapper-dashboard p {
   margin: 5px 0;
 }
 
-div.content-wrapper-dashboard p span,
-a {
+div.content-wrapper-dashboard span {
   font-weight: 500;
   color: #596aff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-
   transition: all 0.1s;
-}
-
-div.content-wrapper-dashboard p a:active {
-  font-size: 20px;
-  color: #4a56c2;
+  text-transform: capitalize;
 }
 
 div.content-wrapper-dashboard .buttons {
@@ -52,8 +46,6 @@ form.update-user fieldset {
 
   display: flex;
   flex-direction: column;
-
-  color: #383838;
 }
 
 form.update-user fieldset legend {
@@ -79,15 +71,6 @@ form.update-user div.input-block label {
   font-size: 18px;
 }
 
-form.update-user div.input-block input {
-  height: 20px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  padding: 10px;
-  color: #596aff;
-}
-
 @media (min-width: 1100px) {
   div.content-wrapper-dashboard {
     width: 50vw;
@@ -99,4 +82,3 @@ form.update-user div.input-block input {
     width: 50vw;
   }
 }
-

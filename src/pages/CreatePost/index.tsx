@@ -137,7 +137,7 @@ export default function CreatePost() {
                   </option>
                   {data.map((category) => {
                     return (
-                      <option style={{textTransform: "capitalize"}} key={category._id} value={category._id}>
+                      <option key={category._id} value={category._id}>
                         {category.nameCategory}
                       </option>
                     );

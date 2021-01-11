@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Button from "../../assets/components/Button/button";
 import Header from "../../assets/components/Header/header";
+import Input from "../../assets/components/Input/input";
 import api from "../../services/api";
 
 import "./login.css";
@@ -39,7 +40,7 @@ export default function Login() {
             <legend>Login</legend>
             <div className='input-block'>
               <label htmlFor='email'>Email</label>
-              <input
+              <Input
                 type='email'
                 id='email'
                 required
@@ -49,7 +50,7 @@ export default function Login() {
             </div>
             <div className='input-block'>
               <label htmlFor='pass'>Senha</label>
-              <input
+              <Input
                 type='password'
                 id='pass'
                 required

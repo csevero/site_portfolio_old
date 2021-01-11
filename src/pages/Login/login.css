@@ -5,7 +5,7 @@ div.content-wrapper-login {
 }
 
 form.login-user {
-  width: 320px;
+  width: 90vw;
   background: #c2cff2;
   box-sizing: border-box;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -20,8 +20,6 @@ form.login-user fieldset {
 
   display: flex;
   flex-direction: column;
-
-  color: #383838;
 }
 
 form.login-user fieldset legend {
@@ -45,15 +43,6 @@ form.login-user div.input-block + div.input-block {
 form.login-user div.input-block label {
   font-weight: 500;
   font-size: 18px;
-}
-
-form.login-user div.input-block input {
-  height: 20px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  padding: 10px;
-  color: #596aff;
 }
 
 form.login-user fieldset a:first-of-type {

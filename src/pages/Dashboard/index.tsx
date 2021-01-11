@@ -6,6 +6,7 @@ import api from "../../services/api";
 import "./dashboard.css";
 import Button from "../../assets/components/Button/button";
 import Modal from "../../assets/components/Modal/modal";
+import Input from "../../assets/components/Input/input";
 
 interface IUser {
   _id: string;
@@ -62,15 +63,22 @@ export default function Dashboard() {
       })
       .then(() => {
         alert("Dados atualizado com sucesso");
-      })
-      .catch(() => {
-        alert("Erro durante atualização");
-      });
 
-    setName("");
-    setEmail("");
-    setPass("");
-    setModal(false);
+        setName("");
+        setEmail("");
+        setPass("");
+        setModal(false);
+      })
+      .catch((err) => {
+        if (err.response.status === 401) {
+          alert("Erro na autenticação, faça o login novamente");
+          localStorage.removeItem("token");
+          localStorage.removeItem("_id");
+          history.push("/login");
+        } else {
+          alert("Erro para atualização");
+        }
+      });
   }
 
   async function deleteUser() {
@@ -149,7 +157,7 @@ export default function Dashboard() {
                       <legend>Atualize seus dados</legend>
                       <div className='input-block'>
                         <label htmlFor='name'>Nome</label>
-                        <input
+                        <Input
                           type='text'
                           id='name'
                           required
@@ -160,7 +168,7 @@ export default function Dashboard() {
                       </div>
                       <div className='input-block'>
                         <label htmlFor='email'>Email</label>
-                        <input
+                        <Input
                           type='email'
                           id='email'
                           required
@@ -170,7 +178,7 @@ export default function Dashboard() {
                       </div>
                       <div className='input-block'>
                         <label htmlFor='pass'>Senha</label>
-                        <input
+                        <Input
                           type='password'
                           id='pass'
                           required

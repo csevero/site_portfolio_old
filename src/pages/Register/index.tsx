@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import Button from "../../assets/components/Button/button";
 import Header from "../../assets/components/Header/header";
+import Input from "../../assets/components/Input/input";
 
 import api from "../../services/api";
 
@@ -20,11 +21,7 @@ export default function Register() {
 
     api
       .post("/user-create", values)
-      .then((response) => {
-        const { token } = response.data;
-
-        localStorage.setItem("token", token);
-
+      .then(() => {
         alert("O cadastro foi criado com sucesso!");
 
         history.push("/login");
@@ -43,7 +40,7 @@ export default function Register() {
 
             <div className='input-block'>
               <label htmlFor='name'>Nome</label>
-              <input
+              <Input
                 type='text'
                 id='name'
                 required
@@ -54,7 +51,7 @@ export default function Register() {
             </div>
             <div className='input-block'>
               <label htmlFor='email'>Email</label>
-              <input
+              <Input
                 type='email'
                 id='email'
                 required
@@ -64,7 +61,7 @@ export default function Register() {
             </div>
             <div className='input-block'>
               <label htmlFor='pass'>Senha</label>
-              <input
+              <Input
                 type='password'
                 id='pass'
                 required
