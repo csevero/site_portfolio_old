@@ -68,7 +68,10 @@ export default function Login() {
               Esqueci minha senha
             </Link>
             <Link
-              to='/cadastro'
+              onClick={() =>
+                alert("opa, estamos trabalhando nisso ainda, aguarde =D")
+              }
+              to='#'
             >
               Quero me cadastrar
             </Link>

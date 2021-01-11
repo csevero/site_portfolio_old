@@ -17,7 +17,9 @@ export default function Register() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    const values = { name, email, pass };
+    alert('opa, estamos trabalhando nisso ainda, aguarde =D')
+
+    /*const values = { name, email, pass };
 
     api
       .post("/user-create", values)
@@ -28,7 +30,7 @@ export default function Register() {
       })
       .catch(() => {
         alert("Erro para fazer o cadastro");
-      });
+      });*/
   }
   return (
     <div id='content-main'>
