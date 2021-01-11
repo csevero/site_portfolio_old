@@ -55,19 +55,11 @@ export default function Posts() {
         });
   }
 
-  if (!postData) {
-    return (
-      <div>
-        <h1>CARREGANDO...</h1>
-      </div>
-    );
-  }
-
   return (
     <div id='content-main'>
       <Header />
       <div className='content-wrapper-posts'>
-        <h1>Veja todos post ou liste pela categoria</h1>
+        <h1 className="title-main">Veja todos post ou liste pela categoria</h1>
         <div className='search'>
           <select
             name='category'
@@ -93,7 +85,7 @@ export default function Posts() {
               >
                 <h1>{post.title}</h1>
                 {/*tag abaixo é para que o navegador consiga 'transpilar' uma string para HTML, fazendo com que entenda suas tags, etc.*/}
-                <p dangerouslySetInnerHTML={{ __html: post.subject }} />
+                <p dangerouslySetInnerHTML={{ __html: post.subject }} className='subject-preview' />
                 <p className='text-secundary'>
                   <span>Criador</span>: {post.user.name}
                 </p>

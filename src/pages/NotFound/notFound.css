@@ -10,10 +10,12 @@ div.content-wrapper-not-found {
 
 div.content-wrapper-not-found h1 {
   animation: color-text1 ease-out infinite 1s;
+  font-size: 28px;
 }
 
 div.content-wrapper-not-found h2 {
   font-weight: 500;
+  font-size: 24px;
 }
 
 div.content-wrapper-not-found .button {
