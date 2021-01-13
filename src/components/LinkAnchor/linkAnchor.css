@@ -1,6 +1,6 @@
 .link-anchor {
   font-weight: 500;
-  color: #596aff;
+  color: var(--primary-color);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 
   transition: all 0.1s;
@@ -8,5 +8,5 @@
 
 .link-anchor:active,
 .link-anchor:hover {
-  color: #4a56c2;
+  color: var(--primary-hover-color);
 }

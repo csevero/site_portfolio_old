@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import Header from "../../assets/components/Header/header";
-import backIcon from "../../assets/images/vector/left-arrow.svg";
+import Header from "../../components/Header/header";
 import addIcon from "../../assets/images/vector/add.svg";
 import "./createPost.css";
 
 import api from "../../services/api";
-import Button from "../../assets/components/Button/button";
+import Button from "../../components/Button/button";
 import { FormEvent } from "react";
-import Modal from "../../assets/components/Modal/modal";
+import Modal from "../../components/Modal/modal";
+import ButtonBack from '../../components/ButtonBack/buttonBack';
+
 
 interface ICategoryProject {
   _id: string;
@@ -100,12 +101,7 @@ export default function CreatePost() {
   return (
     <div id='content-main'>
       <Header />
-      <img
-        src={backIcon}
-        alt='Icone Voltar'
-        onClick={() => history.push("/dashboard")}
-        className='back-image'
-      />
+      <ButtonBack link="/dashboard" />
       <div className='content-wrapper-create-post'>
         <h1>Faça uma nova publicação!</h1>
 

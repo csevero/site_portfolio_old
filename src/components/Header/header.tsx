@@ -1,23 +1,23 @@
-import { NONAME } from "dns";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import api from "../../../services/api";
 
-import menuIcon from "../../images/vector/menu.svg";
+import menuIcon from "../../assets/images/vector/menu.svg";
 
 import "./header.css";
 
 function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
-  const token = localStorage.getItem("token");
+  /*const token = localStorage.getItem("token");
   const _id = localStorage.getItem("_id");
   const [name, setName] = useState("");
 
   async function getData() {
-    const response = await api.get(`/user-by-id/${_id}`);
-
-    setName(response.data.name);
+    await api.get(`/user-by-id/${_id}`).then((response) => {
+      setName(response.data.name);
+    }).catch((err) => {
+      console.log(err.response);
+    });
   }
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function Header() {
     } else {
       getData();
     }
-  }, [token]);
+  }, [token]);*/
 
   return (
     <>
@@ -39,7 +39,7 @@ function Header() {
             <Link to='/'>INICIO</Link>
             <Link to='/historia'>HISTORIA</Link>
             <Link to='/postagens'>POSTAGENS</Link>
-            {token && _id ? (
+            {/*token && _id ? (
               <Link to='/dashboard' className='ref-dashboard'>
                 {name}
               </Link>
@@ -47,7 +47,7 @@ function Header() {
               <Link to='/login' className='ref-login'>
                 LOGIN
               </Link>
-            )}
+            )*/}
           </div>
         ) : (
           <div className='content-exit'></div>
@@ -57,7 +57,7 @@ function Header() {
         <Link to='/'>INICIO</Link>
         <Link to='/historia'>HISTORIA</Link>
         <Link to='/postagens'>POSTAGENS</Link>
-        {token && _id ? (
+        {/*token && _id ? (
           <Link to='/dashboard' className='ref-dashboard'>
             {name}
           </Link>
@@ -65,7 +65,7 @@ function Header() {
           <Link to='/login' className='ref-login'>
             LOGIN
           </Link>
-        )}
+        )*/}
       </div>
     </>
   );

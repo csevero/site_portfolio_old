@@ -28,7 +28,8 @@ div.search select {
   border-radius: 10px;
   font-size: 18px;
   padding: 5px;
-  color: #596aff;
+  text-transform: capitalize;
+  color: var(--primary-color);
   background-color: #fff;
   border: none;
 }
@@ -37,15 +38,17 @@ div.search img {
   width: 36px;
   margin-left: 15px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  background: #596aff;
+  background: var(--primary-color);
   border-radius: 10px;
   padding: 0 5px;
+  cursor: pointer;
 
   transition: all 0.2s;
 }
 
 div.search img:hover,
 div.search img:active {
+  background: var(--primary-hover-color);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -57,7 +60,7 @@ div.post-preview {
   padding: 10px;
   border-radius: 20px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  background: #c2cff2;
+  background: var(--background-secundary-color);
 
   transition: all 0.2s;
 
@@ -67,7 +70,7 @@ div.post-preview {
 div.post-preview:active,
 div.post-preview:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  transform: scale(1.01)
+  transform: scale(1.01);
 }
 
 div.post-preview h1 {
@@ -102,7 +105,7 @@ div.post-preview .subject-preview {
 }
 
 div.post-preview .text-secundary {
-  padding: initial;
+  padding: 0;
   text-align: end;
   text-transform: capitalize;
   font-weight: 400;
@@ -110,7 +113,7 @@ div.post-preview .text-secundary {
 
 div.post-preview a {
   text-decoration: none;
-  color: #383838;
+  color: var(--text-primary-color);
   text-shadow: none;
 }
 

@@ -1,12 +1,13 @@
 import React, { FormEvent, useEffect, useState } from "react";
-import Header from "../../assets/components/Header/header";
 import { Link, useHistory } from "react-router-dom";
 import api from "../../services/api";
 
+import Header from "../../components/Header/header";
+import Button from "../../components/Button/button";
+import Modal from "../../components/Modal/modal";
+import Input from "../../components/Input/input";
+
 import "./dashboard.css";
-import Button from "../../assets/components/Button/button";
-import Modal from "../../assets/components/Modal/modal";
-import Input from "../../assets/components/Input/input";
 
 interface IUser {
   _id: string;
@@ -146,7 +147,7 @@ export default function Dashboard() {
 
                 <Button onClick={logoutUser}>Deslogar</Button>
 
-                <Button onClick={deleteUser} backgroundColor='#d90000'>
+                <Button onClick={deleteUser} backgroundColor="var(--color-danger)">
                   Deletar Cadastro{" "}
                 </Button>
               </div>
@@ -189,7 +190,7 @@ export default function Dashboard() {
                       <Button type='submit'>Atualizar</Button>
                       <Button
                         onClick={() => setModal(!modal)}
-                        backgroundColor='#d90000'
+                        backgroundColor='var(--color-danger)'
                       >
                         Cancelar
                       </Button>

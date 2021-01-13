@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "../../assets/components/Footer/footer";
-import Header from "../../assets/components/Header/header";
-import LinkAnchor from "../../assets/components/LinkAnchor/linkAnchor";
+import Footer from "../../components/Footer/footer";
+import Header from "../../components/Header/header";
+import LinkAnchor from "../../components/LinkAnchor/linkAnchor";
 
 import "./history.css";
 
@@ -42,50 +42,52 @@ export default function Historia() {
             </p>
           </div>
           <div className='text-4'>
-            Quem me apresentou essa tecnologia foi o{" "}
-            <LinkAnchor link='https://www.instagram.com/alemon_ice/'>
-              Rafael Dias
-            </LinkAnchor>{" "}
-            um amigo de longa data que está me ajudando a sempre aprender mais
-            sobre a tecnologia. Agradeço a mim por estar sempre me motivando a
-            continua firme nos objetivos e não deixar me desanimar com os
-            problemas, também a minha família e amigos, especialmente ao{" "}
-            <LinkAnchor link='https://www.instagram.com/matheus_9110/'>
-              Matheus
-            </LinkAnchor>
-            ,{" "}
-            <LinkAnchor link='https://www.instagram.com/alemon_ice/'>
-              Rafael
-            </LinkAnchor>
-            ,{" "}
-            <LinkAnchor link='https://www.instagram.com/douglasxmo/'>
-              Douglas
-            </LinkAnchor>
-            ,{" "}
-            <LinkAnchor link='https://www.instagram.com/eriksevero/'>
-              Erik
-            </LinkAnchor>
-            ,{" "}
-            <LinkAnchor link='https://www.facebook.com/brayan.martins.7946281'>
-              Brayan
-            </LinkAnchor>
-            ,{" "}
-            <LinkAnchor link='https://www.facebook.com/felipe.barrosvarjao'>
-              Felipe
-            </LinkAnchor>
-            ,{" "}
-            <LinkAnchor link='https://www.instagram.com/axell.rocha/'>
-              Axel
-            </LinkAnchor>
-            ,{" "}
-            <LinkAnchor link='https://www.instagram.com/ci.c.ro/'>
-              Cicero
-            </LinkAnchor>{" "}
-            e minha namorada{" "}
-            <LinkAnchor link='https://www.instagram.com/julliana.olvr/'>
-              Juliana
-            </LinkAnchor>
-            .
+            <p>
+              Quem me apresentou essa tecnologia foi o{" "}
+              <LinkAnchor link='https://www.instagram.com/alemon_ice/'>
+                Rafael Dias
+              </LinkAnchor>{" "}
+              um amigo de longa data que está me ajudando a sempre aprender mais
+              sobre a tecnologia. Agradeço a mim por estar sempre me motivando a
+              continua firme nos objetivos e não deixar me desanimar com os
+              problemas, também a minha família e amigos, especialmente ao{" "}
+              <LinkAnchor link='https://www.instagram.com/matheus_9110/'>
+                Matheus
+              </LinkAnchor>
+              ,{" "}
+              <LinkAnchor link='https://www.instagram.com/alemon_ice/'>
+                Rafael
+              </LinkAnchor>
+              ,{" "}
+              <LinkAnchor link='https://www.instagram.com/douglasxmo/'>
+                Douglas
+              </LinkAnchor>
+              ,{" "}
+              <LinkAnchor link='https://www.instagram.com/eriksevero/'>
+                Erik
+              </LinkAnchor>
+              ,{" "}
+              <LinkAnchor link='https://www.facebook.com/brayan.martins.7946281'>
+                Brayan
+              </LinkAnchor>
+              ,{" "}
+              <LinkAnchor link='https://www.facebook.com/felipe.barrosvarjao'>
+                Felipe
+              </LinkAnchor>
+              ,{" "}
+              <LinkAnchor link='https://www.instagram.com/axell.rocha/'>
+                Axel
+              </LinkAnchor>
+              ,{" "}
+              <LinkAnchor link='https://www.instagram.com/ci.c.ro/'>
+                Cicero
+              </LinkAnchor>{" "}
+              e minha namorada{" "}
+              <LinkAnchor link='https://www.instagram.com/julliana.olvr/'>
+                Juliana
+              </LinkAnchor>
+              .
+            </p>
           </div>
         </div>
       </div>

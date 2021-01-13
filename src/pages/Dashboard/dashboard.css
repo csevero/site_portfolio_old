@@ -16,7 +16,7 @@ div.content-wrapper-dashboard p {
 
 div.content-wrapper-dashboard span {
   font-weight: 500;
-  color: #596aff;
+  color: var(--primary-color);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   transition: all 0.1s;
   text-transform: capitalize;
@@ -32,7 +32,7 @@ div.content-wrapper-dashboard .buttons {
 
 form.update-user {
   width: 90vw;
-  background: #c2cff2;
+  background: var(--background-secundary-color);
   box-sizing: border-box;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 

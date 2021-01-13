@@ -11,7 +11,7 @@ div.content-wrapper-register {
 
 form.register-user {
   width: 90vw;
-  background: #c2cff2;
+  background: var(--background-secundary-color);
   box-sizing: border-box;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 

@@ -9,6 +9,7 @@ div.content-wrapper-not-found {
 }
 
 div.content-wrapper-not-found h1 {
+  font-weight: 700;
   animation: color-text1 ease-out infinite 1s;
   font-size: 28px;
 }

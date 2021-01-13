@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../assets/components/Button/button";
-import Header from "../../assets/components/Header/header";
+import Button from "../../components/Button/button";
+import Header from "../../components/Header/header";
 
 import "./notFound.css";
 

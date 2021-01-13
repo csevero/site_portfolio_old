@@ -10,9 +10,9 @@ import whatsIcon from "../../assets/images/vector/whats.svg";
 import linkIcon from "../../assets/images/vector/linke.svg";
 
 import "./home.css";
-import Header from "../../assets/components/Header/header";
-import Footer from "../../assets/components/Footer/footer";
-import LinkAnchor from "../../assets/components/LinkAnchor/linkAnchor";
+import Header from "../../components/Header/header";
+import Footer from "../../components/Footer/footer";
+import LinkAnchor from "../../components/LinkAnchor/linkAnchor";
 
 export default function Home() {
   return (

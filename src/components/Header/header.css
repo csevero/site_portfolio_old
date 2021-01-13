@@ -22,7 +22,7 @@ div.header-mobile button {
   align-items: center;
   justify-content: center;
 
-  background: #c2cff2;
+  background: var(--background-primary-color);
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -50,7 +50,6 @@ div.header-mobile .content-menu {
 
   animation-name: apresentacao-entrada;
   animation-duration: 0.3s;
-
 }
 
 div.header-mobile .content-exit {
@@ -61,14 +60,14 @@ div.header-mobile .content-exit {
 div.header-mobile .content-menu a {
   height: 30px;
   font-weight: 700;
-  color: #596aff;
+  color: var(--primary-color);
 
   transition: all 0.1s;
 }
 
 div.header-mobile .content-menu a:active {
   font-size: 22px;
-  color: #4a56c2;
+  color: var(--primary-hover-color);
 }
 
 div.header-mobile .ref-dashboard {
@@ -89,28 +88,32 @@ div.header-mobile .ref-dashboard {
   div.header-desktop a {
     font-size: 20px;
     font-weight: 700;
-    color: #596aff;
+    color: var(--primary-color);
     margin: 0 10px;
 
-    transition: all 0.3s;
+    transition: all ease-in-out 0.3s;
   }
 
   div.header-desktop a:hover {
-    color: #4a56c2;
+    color: var(--primary-hover-color);
+    border: 3px solid var(--primary-hover-color);
+    padding: 4px;
+    border-radius: 5px;
   }
 
-  div.header-desktop .ref-login {
-    position: absolute;
-    top: 10px;
-    right: 0;
-  }
-
+  div.header-desktop .ref-login,
   div.header-desktop .ref-dashboard {
     position: absolute;
     top: 10px;
     right: 0;
 
     text-transform: uppercase;
+  }
+
+  div.header-desktop .ref-login:hover,
+  div.header-desktop .ref-dashboard:hover {
+    border: none;
+    padding: 0;
   }
 }
 
@@ -125,7 +128,6 @@ div.header-mobile .ref-dashboard {
     height: 100vh;
   }
 }
-
 
 @keyframes apresentacao-saida {
   0% {

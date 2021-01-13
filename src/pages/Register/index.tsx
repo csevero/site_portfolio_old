@@ -1,15 +1,15 @@
 import React, { FormEvent, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
-import Button from "../../assets/components/Button/button";
-import Header from "../../assets/components/Header/header";
-import Input from "../../assets/components/Input/input";
+import Button from "../../components/Button/button";
+import Header from "../../components/Header/header";
+import Input from "../../components/Input/input";
 
-import api from "../../services/api";
+//import api from "../../services/api";
 
 import "./register.css";
 
 export default function Register() {
-  const history = useHistory();
+  //const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
@@ -17,8 +17,7 @@ export default function Register() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    alert('opa, estamos trabalhando nisso ainda, aguarde =D')
-
+    alert('Opa, o cadastro ainda não está habilitado! Aguarde =D')
     /*const values = { name, email, pass };
 
     api

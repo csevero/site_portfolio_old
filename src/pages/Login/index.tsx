@@ -1,8 +1,8 @@
 import React, { FormEvent, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import Button from "../../assets/components/Button/button";
-import Header from "../../assets/components/Header/header";
-import Input from "../../assets/components/Input/input";
+import Button from "../../components/Button/button";
+import Header from "../../components/Header/header";
+import Input from "../../components/Input/input";
 import api from "../../services/api";
 
 import "./login.css";

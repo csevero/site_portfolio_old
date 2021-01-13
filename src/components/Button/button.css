@@ -3,7 +3,7 @@
   height: 40px;
   cursor: pointer;
 
-  background-color: #596aff;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -19,5 +19,5 @@
 .button:active, .button:hover {
   opacity: 0.7;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-  background-color: #3746d0;
+  background-color: var(--primary-hover-color);;
 }

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../assets/components/Header/header";
+import Header from "../../components/Header/header";
 import api from "../../services/api";
 
 import "./posts.css";
-import Arrow from "../../assets/images/vector/left-right.svg";
+import Arrow from "../../assets/images/vector/arrow-white.svg";
 import { Link } from "react-router-dom";
 
 /*
@@ -87,10 +87,10 @@ export default function Posts() {
                 {/*tag abaixo é para que o navegador consiga 'transpilar' uma string para HTML, fazendo com que entenda suas tags, etc.*/}
                 <p dangerouslySetInnerHTML={{ __html: post.subject }} className='subject-preview' />
                 <p className='text-secundary'>
-                  <span>Criador</span>: {post.user.name}
+                  <span>Criador:</span> {post.user.name}
                 </p>
                 <p className='text-secundary'>
-                  <span>Categoria</span>: {post.category_project.nameCategory}
+                  <span>Categoria:</span> {post.category_project.nameCategory}
                 </p>
               </Link>
             </div>

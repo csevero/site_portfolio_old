@@ -1,12 +1,12 @@
 import React from "react";
 
-import gitIcon from "../../images/vector/git.svg";
-import instaIcon from "../../images/vector/insta.svg";
-import whatsIcon from "../../images/vector/whats.svg";
-import linkIcon from "../../images/vector/linke.svg";
+import gitIcon from "../../assets/images/vector/git.svg";
+import instaIcon from "../../assets/images/vector/insta.svg";
+import whatsIcon from "../../assets/images/vector/whats.svg";
+import linkIcon from "../../assets/images/vector/linke.svg";
 
-import "./footer.css";
 import LinkAnchor from "../LinkAnchor/linkAnchor";
+import "./footer.css";
 
 function Footer() {
   return (

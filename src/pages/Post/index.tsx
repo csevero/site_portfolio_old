@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
-import Header from "../../assets/components/Header/header";
 import api from "../../services/api";
 
+import Header from "../../components/Header/header";
+import LinkAnchor from "../../components/LinkAnchor/linkAnchor";
+
 import "./post.css";
+import ButtonBack from "../../components/ButtonBack/buttonBack";
 
 interface IPostProps {
   title: string;
@@ -41,13 +43,31 @@ export default function Post() {
 
     getPost();
   }, []);
-  
+
   return (
     <div id='content-main'>
       <Header />
+      <ButtonBack link='/postagens' />
       <div className='content-wrapper-post'>
         {post.map((postInfo) => {
-          return <h1>testinho</h1>;
+          return (
+            <div className='post-content'>
+              <section className='top'>
+                <h1>{postInfo.title}</h1>
+              </section>
+              <p dangerouslySetInnerHTML={{ __html: postInfo.subject }} />
+              <p className='text-secundary'>
+                <span>Criador:</span> {postInfo.user.name}
+              </p>
+              <p className='text-secundary'>
+                <span>Categoria:</span> {postInfo.category_project.nameCategory}
+              </p>
+              <br />
+              <LinkAnchor link={`mailto:${postInfo.user.email}`}>
+                Entrar em contato com criador
+              </LinkAnchor>
+            </div>
+          );
         })}
       </div>
     </div>

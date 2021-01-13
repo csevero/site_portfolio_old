@@ -1,0 +1,17 @@
+.back-image {
+   width: 36px;
+   height: 36px;
+   position: absolute;
+ 
+   top: 10px;
+   left: 10px;
+ 
+   cursor: pointer;
+ 
+   transition: all 0.2s;
+ }
+
+ .back-image:active, .back-image:hover {
+   opacity: 0.6;
+ }
+ 

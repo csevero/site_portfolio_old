@@ -1,7 +1,7 @@
 
 div.footer {
    width: 100%;
-   background: #c2cff2;
+   background: var(--background-secundary-color);
 
    display: flex;
    flex-direction: column;

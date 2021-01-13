@@ -4,5 +4,5 @@ input {
    border-radius: 10px;
    font-size: 18px;
    padding: 10px;
-   color: #596aff;
+   color: var(--primary-color);
  }
