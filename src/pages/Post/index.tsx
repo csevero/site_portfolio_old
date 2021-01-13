@@ -29,6 +29,7 @@ export default function Post() {
   const [post, setPost] = useState<IPostProps[]>([]);
 
   useEffect(() => {
+
     async function getPost() {
       await api
         .get(`/project-by-id/${params.id}`)

@@ -27,18 +27,18 @@ export default function Dashboard() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  async function getData() {
-    await api
-      .get(`/user-by-id/${_id}`)
-      .then((response) => {
-        setData([response.data]);
-      })
-      .catch(() => {
-        alert("Erro para capturar os dados");
-      });
-  }
-
   useEffect(() => {
+    async function getData() {
+      await api
+        .get(`/user-by-id/${_id}`)
+        .then((response) => {
+          setData([response.data]);
+        })
+        .catch(() => {
+          alert("Erro para capturar os dados");
+        });
+    }
+    
     if (!token || !_id) {
       alert("Falha na autenticação");
       history.push("/login");
@@ -46,14 +46,6 @@ export default function Dashboard() {
       getData();
     }
   }, [token, _id]);
-
-  if (!data) {
-    return (
-      <div>
-        <h1>CARREGANDO...</h1>
-      </div>
-    );
-  }
 
   async function userUpdate(e: FormEvent) {
     e.preventDefault();
@@ -72,7 +64,7 @@ export default function Dashboard() {
       })
       .catch((err) => {
         if (err.response.status === 401) {
-          alert("Erro na autenticação, faça o login novamente");
+          alert("Falha na autenticação, faça o login novamente");
           localStorage.removeItem("token");
           localStorage.removeItem("_id");
           history.push("/login");
@@ -147,7 +139,10 @@ export default function Dashboard() {
 
                 <Button onClick={logoutUser}>Deslogar</Button>
 
-                <Button onClick={deleteUser} backgroundColor="var(--color-danger)">
+                <Button
+                  onClick={deleteUser}
+                  backgroundColor='var(--color-danger)'
+                >
                   Deletar Cadastro{" "}
                 </Button>
               </div>

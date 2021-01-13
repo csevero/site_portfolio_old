@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button/button";
 import Header from "../../components/Header/header";
 import Input from "../../components/Input/input";

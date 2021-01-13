@@ -9,8 +9,7 @@ import api from "../../services/api";
 import Button from "../../components/Button/button";
 import { FormEvent } from "react";
 import Modal from "../../components/Modal/modal";
-import ButtonBack from '../../components/ButtonBack/buttonBack';
-
+import ButtonBack from "../../components/ButtonBack/buttonBack";
 
 interface ICategoryProject {
   _id: string;
@@ -31,18 +30,18 @@ export default function CreatePost() {
   const [modal, setModal] = useState<Boolean>(false);
   const [nameCategory, setNameCategory] = useState("");
 
-  async function getData() {
-    await api
-      .get("/category-list-all")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((err) => {
-        alert(err.response.data.error);
-      });
-  }
-
   useEffect(() => {
+    async function getData() {
+      await api
+        .get("/category-list-all")
+        .then((response) => {
+          setData(response.data);
+        })
+        .catch((err) => {
+          alert(err.response.data.error);
+        });
+    }
+
     if (!token || !_id) {
       alert("Falha na autenticação");
       history.push("/login");
@@ -94,14 +93,19 @@ export default function CreatePost() {
         setModal(false);
       })
       .catch((err) => {
-        alert(err.response.data.error);
+        if (err.response.status === 401) {
+          alert("Falha na autenticação, faça o login novamente");
+          localStorage.removeItem("token");
+          localStorage.removeItem("_id");
+          history.push("/login");
+        }
       });
   }
 
   return (
     <div id='content-main'>
       <Header />
-      <ButtonBack link="/dashboard" />
+      <ButtonBack link='/dashboard' />
       <div className='content-wrapper-create-post'>
         <h1>Faça uma nova publicação!</h1>
 

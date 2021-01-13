@@ -10,7 +10,7 @@ interface Props {
 function ButtonBack({ link }: Props) {
   return (
     <Link to={`${link}`}>
-      <img src={arrow} className='back-image' />
+      <img src={arrow} className='back-image' alt="button back" />
     </Link>
   );
 }
