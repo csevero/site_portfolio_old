@@ -85,6 +85,7 @@ export default function Posts() {
               >
                 <h1>{post.title}</h1>
                 <p dangerouslySetInnerHTML={{ __html: post.subject }} className='subject-preview' />
+                <br />
                 <p className='text-secundary'>
                   <span>Criador:</span> {post.user.name}
                 </p>
