@@ -84,7 +84,6 @@ export default function Posts() {
                 to={`/postagem/${post.category_project.nameCategory}/${post._id}`}
               >
                 <h1>{post.title}</h1>
-                {/*tag abaixo é para que o navegador consiga 'transpilar' uma string para HTML, fazendo com que entenda suas tags, etc.*/}
                 <p dangerouslySetInnerHTML={{ __html: post.subject }} className='subject-preview' />
                 <p className='text-secundary'>
                   <span>Criador:</span> {post.user.name}

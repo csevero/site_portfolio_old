@@ -29,7 +29,6 @@ export default function Post() {
   const [post, setPost] = useState<IPostProps[]>([]);
 
   useEffect(() => {
-
     async function getPost() {
       await api
         .get(`/project-by-id/${params.id}`)
@@ -53,10 +52,9 @@ export default function Post() {
         {post.map((postInfo) => {
           return (
             <div className='post-content'>
-              <section className='top'>
-                <h1>{postInfo.title}</h1>
-              </section>
-              <p dangerouslySetInnerHTML={{ __html: postInfo.subject }} />
+              <h1>{postInfo.title}</h1>
+              <p dangerouslySetInnerHTML={{ __html: postInfo.subject }} className="text-subject" />
+              <br />
               <p className='text-secundary'>
                 <span>Criador:</span> {postInfo.user.name}
               </p>

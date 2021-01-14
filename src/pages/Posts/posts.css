@@ -63,8 +63,6 @@ div.post-preview {
   background: var(--background-secundary-color);
 
   transition: all 0.2s;
-
-  overflow: hidden;
 }
 
 div.post-preview:active,
@@ -93,15 +91,15 @@ display: definimos o webkit-box para que seja possivel aplicar propriedades usan
  overflow: colocamos hidden no overflow para esconder os conteúdos que estão extrapolando o tamanho da tag;
 */
 div.post-preview .subject-preview {
-  padding: 15px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+  height: 230px;
+  padding: 10px;
   overflow: hidden;
-
   font-weight: 400;
+}
+
+div.post-preview .subject-preview img {
+  max-width: 70vw;
+  border-radius: 5px;
 }
 
 div.post-preview .text-secundary {
