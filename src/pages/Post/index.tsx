@@ -8,21 +8,7 @@ import LinkAnchor from "../../components/LinkAnchor/linkAnchor";
 import "./post.css";
 import ButtonBack from "../../components/ButtonBack/buttonBack";
 
-interface IPostProps {
-  title: string;
-  subject: string;
-  category_project: {
-    nameCategory: string;
-  };
-  user: {
-    name: string;
-    email: string;
-  };
-}
-
-interface IPostParams {
-  id: string;
-}
+import { IPostProps, IPostParams } from "../../interfaces/post.interface";
 
 export default function Post() {
   const params = useParams<IPostParams>();
@@ -53,7 +39,10 @@ export default function Post() {
           return (
             <div className='post-content'>
               <h1>{postInfo.title}</h1>
-              <p dangerouslySetInnerHTML={{ __html: postInfo.subject }} className="text-subject" />
+              <p
+                dangerouslySetInnerHTML={{ __html: postInfo.subject }}
+                className='text-subject'
+              />
               <br />
               <p className='text-secundary'>
                 <span>Criador:</span> {postInfo.user.name}

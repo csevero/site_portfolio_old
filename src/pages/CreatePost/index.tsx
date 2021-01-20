@@ -11,10 +11,8 @@ import { FormEvent } from "react";
 import Modal from "../../components/Modal/modal";
 import ButtonBack from "../../components/ButtonBack/buttonBack";
 
-interface ICategoryProject {
-  _id: string;
-  nameCategory: string;
-}
+import { ICategoryProps } from "../../interfaces/category.interface";
+import { getAllCategories } from "../../services/category.services";
 
 export default function CreatePost() {
   const history = useHistory();
@@ -25,21 +23,15 @@ export default function CreatePost() {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [categoryId, setCategoryId] = useState("");
-  const [data, setData] = useState<ICategoryProject[]>([]);
+  const [data, setData] = useState<ICategoryProps[]>([]);
 
   const [modal, setModal] = useState<Boolean>(false);
   const [nameCategory, setNameCategory] = useState("");
 
   useEffect(() => {
     async function getData() {
-      await api
-        .get("/category-list-all")
-        .then((response) => {
-          setData(response.data);
-        })
-        .catch((err) => {
-          alert(err.response.data.error);
-        });
+      const categoriesResponse = await getAllCategories();
+      setData(categoriesResponse);
     }
 
     if (!token || !_id) {
@@ -47,8 +39,9 @@ export default function CreatePost() {
       history.push("/login");
     } else {
       getData();
-    }
-  }, [modal, token, _id]);
+    } 
+
+  }, [modal, token, _id, history]);
 
   async function createPost(e: FormEvent) {
     e.preventDefault();

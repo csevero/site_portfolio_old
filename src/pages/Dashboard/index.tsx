@@ -10,20 +10,16 @@ import Input from "../../components/Input/input";
 import { toast } from "react-toastify";
 import { verifyAuthentication } from "../../utils/verifyAuthentication";
 
-import "./dashboard.css";
+import { IUserProps } from "../../interfaces/user.interface";
 
-interface IUser {
-  _id: string;
-  name: string;
-  email: string;
-}
+import "./dashboard.css";
 
 export default function Dashboard() {
   const history = useHistory();
   const token = localStorage.getItem("token");
   const _id = localStorage.getItem("_id");
 
-  const [data, setData] = useState<IUser[]>([]);
+  const [data, setData] = useState<IUserProps[]>([]);
   const [modalUpdate, setModalUpdate] = useState<Boolean>(false);
   const [modalPassword, setModalPassword] = useState<Boolean>(false);
 
