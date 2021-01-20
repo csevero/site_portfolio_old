@@ -30,6 +30,15 @@ div.content-wrapper-dashboard .buttons {
   flex-direction: column;
 }
 
+div.content-wrapper-dashboard .buttons .update-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+div.content-wrapper-dashboard .buttons .update-buttons button:first-of-type {
+  margin-right: 10px;
+}
+
 form.update-user {
   width: 90vw;
   background: var(--background-secundary-color);
