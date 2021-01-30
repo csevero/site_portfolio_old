@@ -1,0 +1,41 @@
+div.content-wrapper-history {
+  width: 90vw;
+  
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+div.content-wrapper-history .text-main {
+  height: 50px;
+  font-weight: 700;
+  animation: color-text1 ease-out infinite 1s;
+  font-size: 28px;
+}
+
+@media (min-width: 1100px) {
+  div.content-wrapper-history {
+    margin-top: 20px;
+  }
+
+  div.footer {
+    margin-top: 170px;
+  }
+}
+
+@keyframes color-text1 {
+  0% {
+    color: rgb(99, 91, 255);
+  }
+
+  50% {
+    color: rgb(170, 166, 255);
+  }
+
+  100% {
+    color: rgb(99, 91, 255);
+  }
+}

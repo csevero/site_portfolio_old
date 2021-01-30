@@ -4,12 +4,12 @@
   --primary-color: #596aff;
   --primary-hover-color: #4a56c2;
 
-  --color-danger: #d90000;
 
   --background-primary-color: #e6eaf2;
   --background-secundary-color: #c2cff2;
 
   --text-primary-color: #383838;
+  --text-secundary-color: #596aff;
 }
 
 * {
