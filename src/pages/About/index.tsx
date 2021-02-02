@@ -64,14 +64,14 @@ export default function About() {
           {repos.repositories.map((info, index) => {
             if (index <= 3) {
               return (
-                <div className="card-container">
-                  <LinkAnchor link={`${info.url}`} className="post-link">
+                <LinkAnchor link={`${info.url}`} className="post-link">
+                  <div className="card-container">
                     <div className="card-content">
                       <h1>{info.name}</h1>
                       <p>{info.description}</p>
                     </div>
-                  </LinkAnchor>
-                </div>
+                  </div>
+                </LinkAnchor>
               );
             }
             return null;

@@ -4,14 +4,8 @@ import { Link } from 'react-router-dom';
 
 import rostoImg from '../../assets/images/perfil.png';
 
-import gitIcon from '../../assets/images/vector/git.svg';
-import instaIcon from '../../assets/images/vector/insta.svg';
-import whatsIcon from '../../assets/images/vector/whats.svg';
-import linkIcon from '../../assets/images/vector/linke.svg';
-
 import './home.css';
 import Header from '../../components/Header/header';
-import LinkAnchor from '../../components/LinkAnchor/linkAnchor';
 
 export default function Home() {
   return (
