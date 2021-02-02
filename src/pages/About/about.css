@@ -1,41 +1,122 @@
-div.content-wrapper-history {
+div.content-wrapper-about {
   width: 90vw;
-  
+
   display: flex;
   text-align: justify;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
   margin-top: 20px;
 }
 
-div.content-wrapper-history .text-main {
+div.content-wrapper-about .text-main {
+  animation: 1.5s text-blush infinite;
   height: 50px;
   font-weight: 700;
-  animation: color-text1 ease-out infinite 1s;
   font-size: 28px;
 }
 
+div.content-wrapper-about p {
+  margin: 5px 0;
+}
+
+div.content-wrapper-about p ul {
+  list-style: none;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+div.content-wrapper-about p ul li {
+  font-weight: 400;
+}
+
+div.repos-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+div.repos-preview a {
+  color: #383838;
+  font-weight: initial;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+div.card-container {
+  width: 90vw;
+  height: 160px;
+
+  border: none;
+  box-shadow: 1px 1px 2px var(--primary-color);
+  background: var(--background-cards);
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  margin: 5px 0;
+
+  transition: all ease-in-out 0.3s;
+}
+
+div.card-container:hover,
+div.card-container:active {
+  transform: scale(1.02);
+  background: var(--background-secundary-color);
+  box-shadow: 0 0 5px var(--text-secundary-color);
+}
+
+div.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.card-content h1 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+div.card-content p {
+  max-width: 22ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div.footer {
+  margin-top: 20px;
+}
+
 @media (min-width: 1100px) {
-  div.content-wrapper-history {
-    margin-top: 20px;
+  div.repos-preview {
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: repeat(2, 2fr);
+    text-align: -webkit-center;
   }
 
-  div.footer {
-    margin-top: 170px;
+  div.card-container {
+    width: 300px;
+    height: 160px;
   }
 }
 
-@keyframes color-text1 {
+@keyframes text-blush {
   0% {
-    color: rgb(99, 91, 255);
+    color: var(--text-primary-color);
   }
 
   50% {
-    color: rgb(170, 166, 255);
+    color: var(--text-secundary-color);
+    text-shadow: 0 0 0.5px var(--text-primary-color);
   }
 
-  100% {
-    color: rgb(99, 91, 255);
+  10% {
+    color: var(--text-primary-color);
   }
 }

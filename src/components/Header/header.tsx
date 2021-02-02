@@ -17,7 +17,8 @@ function Header() {
         {openMenu ? (
           <div className='content-menu'>
             <Link to='/'>INICIO</Link>
-            <Link to='/sobre-mim'>HISTORIA</Link>            
+            <Link to='/sobre-mim'>SOBRE MIM</Link>
+            <Link to="/contato">CONTATO</Link>          
           </div>
         ) : (
           <div className='content-exit'></div>
@@ -25,7 +26,8 @@ function Header() {
       </div>
       <div className='header-desktop'>
         <Link to='/'>INICIO</Link>
-        <Link to='/sobre-mim'>HISTORIA</Link>
+        <Link to='/sobre-mim'>SOBRE MIM</Link>
+        <Link to="/contato">CONTATO</Link>
       </div>
     </>
   );

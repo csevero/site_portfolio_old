@@ -1,0 +1,54 @@
+div.content-wrapper-contact {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+div.content-wrapper-contact p {
+  font-size: 15px;
+}
+
+div.social-networks a {
+  color: #383838;
+  font-weight: initial;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+div.social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 1px 1px 2px var(--primary-color);
+  background: var(--background-cards);
+  border-radius: 10px;
+
+  margin-top: 10px;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+div.social:hover,
+div.social:active {
+  transform: scale(1.02);
+  background: var(--background-secundary-color);
+  box-shadow: 0 0 5px var(--text-secundary-color);
+}
+
+div.social img {
+  width: 42px;
+  height: 42px;
+}
+
+div.social p {
+  font-size: 16px;
+  margin-left: 5px;
+}

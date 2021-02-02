@@ -1,0 +1,24 @@
+{
+  "repositories": [
+    {
+      "name": "project_devSuperior",
+      "description": "Project developed during the week of dev Superior. Was develop, a aplication of delivery, using Spring Boot with language Java on backend, ReactJS with language Typescript on Frontend and for mobile was used React Native also using Typescript",
+      "url": "https://github.com/kissinger156/project_devSuperior"
+    },
+    {
+      "name": "site_bodyShop",
+      "description": "Site develop for a body shop for aprimoring my knowledges about development with React.",
+      "url": "https://github.com/kissinger156/site_bodyShop"
+    },
+    {
+      "name": "project_api_meteorology",
+      "description": "Project Developed during the course of Walde.co on Youtube, was developed a API of meteorology for list a forecast",
+      "url": "https://github.com/kissinger156/project_api_meteorology"
+    },
+    {
+      "name": "happy_nlw_3",
+      "description": "Project developed during the immersion of Rocketseat, the project was built with React, using Typescript, Sqlite3, Nodejs, Typeorm and more. || Projeto desenvolvido durante a imersão do Rocketseat, o projeto foi construído com React, usando Typescript, Sqlite3, Nodejs, Typeorm e outros.",
+      "url": "https://github.com/kissinger156/happy_nlw_3"
+    }
+  ]
+}
